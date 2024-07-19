@@ -1,0 +1,62 @@
+@import "../../assets/scss/lib/variables";
+@import "../../assets/scss/lib/mixins";
+
+.header {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid $border;
+}
+
+.nav {
+  width: 1200px;
+  margin: 0 auto;
+
+  @include flex();
+}
+
+.list {
+  @include flex();
+  gap: 48px;
+}
+
+.link {
+  @include text(1rem, 1.2rem, 600, $black);
+  transition: 0.2s ease;
+
+  &:hover {
+    color: $purple;
+  }
+}
+
+.logo {
+  width: 150px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.input {
+  position: relative;
+  width: 264px;
+
+  input {
+    width: 100%;
+    padding: 8px 0 8px 48px;
+    background: rgba($border, 0.4);
+    border: 1px solid $border;
+    border-radius: 48px;
+    outline: none;
+    @include text(1rem, 1.2rem, 400, $black);
+
+    &::placeholder {
+      @include text(1rem, 1.2rem, 400, rgba($black, 0.7));
+    }
+  }
+
+  svg {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: $border;
+  }
+}
