@@ -23,7 +23,7 @@
   transition: 0.2s ease;
 
   &:hover {
-    color: $purple;
+    color: $blue;
   }
 }
 
@@ -40,7 +40,7 @@
   input {
     width: 100%;
     padding: 8px 0 8px 48px;
-    background: rgba($border, 0.4);
+    background: rgba($border, 0.3);
     border: 1px solid $border;
     border-radius: 48px;
     outline: none;

@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { GoSearch } from "react-icons/go";
 import logo from "@img/logo.png";
+import { BOOKS_PAGE_ROUTE, CATEGORIES_PAGE_ROUTE, HOME_PAGE_ROUTE } from "@utils/consts";
 import styles from "./Header.module.scss";
 
 export default function Header() {
@@ -13,17 +14,17 @@ export default function Header() {
         </div>
         <ul className={styles.list}>
           <li>
-            <Link href="/" className={styles.link}>
+            <Link href={HOME_PAGE_ROUTE} className={styles.link}>
               Home
             </Link>
           </li>
           <li>
-            <Link href="/books" className={styles.link}>
+            <Link href={BOOKS_PAGE_ROUTE} className={styles.link}>
               Books
             </Link>
           </li>
           <li>
-            <Link href="/categories" className={styles.link}>
+            <Link href={CATEGORIES_PAGE_ROUTE} className={styles.link}>
               Categories
             </Link>
           </li>

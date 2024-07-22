@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import Header from "@components/Header";
+import styles from "./Layout.module.scss";
 import "@scss/style.scss";
 
-const inter = Nunito({ subsets: ["latin"] });
+const nunito = Nunito({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,9 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={nunito.className}>
         <Header />
-        <main>{children}</main>
+        <main className={styles.container}>{children}</main>
       </body>
     </html>
   );
